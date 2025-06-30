@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0A1E167C2E10353A00A3BE41 /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E16782E10353A00A3BE41 /* QuoteManager.swift */; };
+		0A1E167D2E10353A00A3BE41 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E16732E10353A00A3BE41 /* main.swift */; };
+		0A1E16812E1038D200A3BE41 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E16802E1038CC00A3BE41 /* Quote.swift */; };
+		0A1E16832E1038F500A3BE41 /* QuoteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E16822E1038F400A3BE41 /* QuoteDatabase.swift */; };
+		0A1E16852E1039BA00A3BE41 /* EmbeddedQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E16842E1039BA00A3BE41 /* EmbeddedQuotes.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		0A1E164C2E10169700A3BE41 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,15 +28,15 @@
 
 /* Begin PBXFileReference section */
 		0A1E164E2E10169700A3BE41 /* quoter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = quoter; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1E16732E10353A00A3BE41 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0A1E16752E10353A00A3BE41 /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
+		0A1E16772E10353A00A3BE41 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0A1E16782E10353A00A3BE41 /* QuoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
+		0A1E167E2E10375800A3BE41 /* ConvertJSONToSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertJSONToSwift.swift; sourceTree = "<group>"; };
+		0A1E16802E1038CC00A3BE41 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		0A1E16822E1038F400A3BE41 /* QuoteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDatabase.swift; sourceTree = "<group>"; };
+		0A1E16842E1039BA00A3BE41 /* EmbeddedQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedQuotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		0A1E16502E10169700A3BE41 /* quoter */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = quoter;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0A1E164B2E10169700A3BE41 /* Frameworks */ = {
@@ -44,7 +52,11 @@
 		0A1E16452E10169700A3BE41 = {
 			isa = PBXGroup;
 			children = (
-				0A1E16502E10169700A3BE41 /* quoter */,
+				0AD50B6F2E103E770004B3A4 /* BuildScripts */,
+				0A1E16732E10353A00A3BE41 /* main.swift */,
+				0A1E16762E10353A00A3BE41 /* Quotes */,
+				0A1E16772E10353A00A3BE41 /* README.md */,
+				0A1E16792E10353A00A3BE41 /* Sources */,
 				0A1E164F2E10169700A3BE41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +67,33 @@
 				0A1E164E2E10169700A3BE41 /* quoter */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0A1E16762E10353A00A3BE41 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				0A1E16752E10353A00A3BE41 /* quotes.json */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		0A1E16792E10353A00A3BE41 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0A1E16822E1038F400A3BE41 /* QuoteDatabase.swift */,
+				0A1E16842E1039BA00A3BE41 /* EmbeddedQuotes.swift */,
+				0A1E16802E1038CC00A3BE41 /* Quote.swift */,
+				0A1E16782E10353A00A3BE41 /* QuoteManager.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0AD50B6F2E103E770004B3A4 /* BuildScripts */ = {
+			isa = PBXGroup;
+			children = (
+				0A1E167E2E10375800A3BE41 /* ConvertJSONToSwift.swift */,
+			);
+			path = BuildScripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +110,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				0A1E16502E10169700A3BE41 /* quoter */,
 			);
 			name = quoter;
 			packageProductDependencies = (
@@ -121,6 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1E167C2E10353A00A3BE41 /* QuoteManager.swift in Sources */,
+				0A1E16812E1038D200A3BE41 /* Quote.swift in Sources */,
+				0A1E16852E1039BA00A3BE41 /* EmbeddedQuotes.swift in Sources */,
+				0A1E16832E1038F500A3BE41 /* QuoteDatabase.swift in Sources */,
+				0A1E167D2E10353A00A3BE41 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
